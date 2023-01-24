@@ -12,17 +12,14 @@ export function App() {
       <div className={style.wrapper}>
         <Sidebar />
         <main>
-          <Post/>
-          <Post/>
-          <Post/>
-          <Post/>
-          <Post/>
-          <Post/>
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
         </main>
       </div>
     </div>
 
   )
 }
-
-
