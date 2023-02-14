@@ -3,6 +3,7 @@ import { Comment } from './Comment';
 import styles from './Post.module.css';
 import { format, formatDistanceToNow } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
+import { useState } from 'react';
 
 export function Post({ author, content, publishedAt }) {
 
@@ -14,6 +15,26 @@ export function Post({ author, content, publishedAt }) {
         locale: ptBR,
         addSuffix: true,
     })
+
+    //Array de comentários
+    const [comments, setComments] = useState([])
+
+    const [newCommentText, setNewCommentText] = useState('')
+
+
+    function handleCreateNewComment() {
+        event.preventDefault();
+        console.log('oi');
+
+        setComments([...comments, newCommentText])
+        setNewCommentText('')
+
+    }
+
+    function handleNewCommentChange() {
+        setNewCommentText(event.target.value)
+    }
+
     return (
         <article className={styles.post}>
             <header>
@@ -39,16 +60,21 @@ export function Post({ author, content, publishedAt }) {
                     }
                 })}
             </div>
-            <form className={styles.commentForm}>
+            <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
                 <strong>Deixe seu comentário!</strong>
-                <textarea placeholder='Deixe um comentário' />
+
+                <textarea name='comment'
+                    placeholder='Deixe um comentário'
+                    onChange={handleNewCommentChange}
+                    value={newCommentText}
+                />
                 <button type='submit'>Publicar</button>
             </form>
 
             <div className={styles.commentList}>
-                <Comment />
-                <Comment />
-                <Comment />
+                {comments.map(comment => {
+                    return <Comment content={comment} />
+                })}
             </div>
         </article>
     )
