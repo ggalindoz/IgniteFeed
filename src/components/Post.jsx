@@ -75,6 +75,7 @@ export function Post({ author, content, publishedAt }) {
                     placeholder='Deixe um comentário'
                     onChange={handleNewCommentChange}
                     value={newCommentText}
+                    required
                 />
                 <button type='submit'>Publicar</button>
             </form>
