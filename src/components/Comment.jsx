@@ -12,7 +12,7 @@ export function Comment({ content, onDeleteComment }) {
         onDeleteComment(content)
     }
 
-    function handleNewLike() {
+    function handleNewLikeComment() {
         setAmaountOfLikes(amountsOfLikes + 1)
     }
     return (
@@ -36,7 +36,7 @@ export function Comment({ content, onDeleteComment }) {
                 </div>
 
                 <footer className={styles.footer}>
-                    <button onClick={handleNewLike}>
+                    <button onClick={handleNewLikeComment}>
                         <ThumbsUp />
                         Aplaudir <span>{amountsOfLikes}</span>
                     </button>

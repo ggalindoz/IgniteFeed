@@ -10,7 +10,7 @@ export function Sidebar() {
             <div className={style.profile}>
 
                 <Avatar
-                    src="https://scontent.fgyn3-1.fna.fbcdn.net/v/t1.6435-9/183537592_3931815706912843_6588295288398450559_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFp2fTr1uZHw92Kp9mqUsNUhWkpXBcgKTiFaSlcFyApOLv0gcJW1cKS8fpMXOacD9w5u2vC-6-Rs7gCeCEy-w_c&_nc_ohc=G3pdkzcxZFQAX8zA8or&_nc_ht=scontent.fgyn3-1.fna&oh=00_AfBCgDBrvxSF5jF1ShzPeeP-AaoRZzy7LL-L21K-xOz20A&oe=63E54CDB" alt="" />
+                    src="https://cdn.folhape.com.br/img/pc/1100/1/dn_arquivo/2022/07/279420777-1109033966347510-3690137499922067532-n.jpg" alt="" />
                 <strong>Guilherme Galindo</strong>
                 <span>Desenvolvedor</span>
 
