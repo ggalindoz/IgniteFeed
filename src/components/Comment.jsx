@@ -13,7 +13,9 @@ export function Comment({ content, onDeleteComment }) {
     }
 
     function handleNewLikeComment() {
-        setAmaountOfLikes(amountsOfLikes + 1)
+        setAmaountOfLikes((qtdLikes) => {
+            return qtdLikes + 1
+        })
     }
     return (
         <div className={styles.comment}>
